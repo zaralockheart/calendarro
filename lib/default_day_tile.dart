@@ -1,6 +1,6 @@
 import 'package:calendarro/calendarro.dart';
 import 'package:calendarro/date_utils.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide DateUtils;
 
 class CalendarroDayItem extends StatelessWidget {
   CalendarroDayItem({this.date, this.calendarroState, this.onTap});
@@ -32,18 +32,18 @@ class CalendarroDayItem extends StatelessWidget {
 
     return Expanded(
         child: GestureDetector(
-          child: Container(
-              height: 40.0,
-              decoration: boxDecoration,
-              child: Center(
-                  child: Text(
-                    "${date.day}",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: textColor),
-                  ))),
-          onTap: handleTap,
-          behavior: HitTestBehavior.translucent,
-        ));
+      child: Container(
+          height: 40.0,
+          decoration: boxDecoration,
+          child: Center(
+              child: Text(
+            "${date.day}",
+            textAlign: TextAlign.center,
+            style: TextStyle(color: textColor),
+          ))),
+      onTap: handleTap,
+      behavior: HitTestBehavior.translucent,
+    ));
   }
 
   void handleTap() {

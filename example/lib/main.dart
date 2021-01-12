@@ -1,6 +1,6 @@
-import 'package:calendarro/date_utils.dart';
-import 'package:flutter/material.dart';
 import 'package:calendarro/calendarro.dart';
+import 'package:calendarro/date_utils.dart';
+import 'package:flutter/material.dart' hide DateUtils;
 
 void main() => runApp(new MyApp());
 
